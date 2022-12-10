@@ -6,10 +6,13 @@ const str = html`
   <html>
     <head>
       <title>nui nasum's user interface</title>
+      <script src="./script" defer></script>
     </head>
-    <div id="app">
-      hoge
-    </div>
+    <body>
+      <div id="app">
+        hoge
+      </div>
+    </body>
   </html>
   `;
 
@@ -22,8 +25,8 @@ const handler = (request: Request): Response => {
   switch (parsed_url.pathname) {
     case "/":
       return new Response(encoder.encode(str), { status: 200 });
-    case "/fuga":
-      return new Response("fuga", { status: 200 });
+    case "/script":
+      return new Response(encoder.encode('alert("hoge")'), { status: 200 });
     default:
       return new Response("not found", { status: 404 });
   }
