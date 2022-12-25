@@ -1,4 +1,4 @@
-import { Element } from "./element";
+import { Element } from "./BaseElement";
 
 export class Page implements Element {
   target: string;
