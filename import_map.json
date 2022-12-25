@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "./": "./",
-    "html/": "https://deno.land/x/html@v1.2.0/",
-    "std/": "https://deno.land/std@0.167.0/",
-    "url_parse/": "https://deno.land/x/url_parse@1.1.0/"
-  }
-}
