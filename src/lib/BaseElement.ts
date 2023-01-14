@@ -1,6 +1,6 @@
-export interface Element {
+export interface BaseElement {
   name: string;
-  html: string;
+  children?: BaseElement[];
 
   render(): void;
 }

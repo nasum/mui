@@ -1,17 +1,27 @@
-import { Element } from "./BaseElement";
+import { NUIElement } from "./NUIElement";
 
-export class Page implements Element {
+type PageConstructor = {
   target: string;
   name: string;
-  html: string;
+  children?: NUIElement[];
+};
 
-  constructor(target: string, name: string, html: string) {
+export class Page {
+  target: string;
+  name: string;
+  children?: NUIElement[];
+
+  constructor({ target, name, children }: PageConstructor) {
     this.target = target;
     this.name = name;
-    this.html = html;
+    this.children = children;
   }
 
   render(): void {
-    document.querySelector<HTMLDivElement>(this.target)!.innerHTML = this.html;
+    let html = "";
+    this.children?.forEach((element) => {
+      html += element.render();
+    });
+    document.querySelector<HTMLDivElement>(this.target)!.innerHTML = html;
   }
 }
