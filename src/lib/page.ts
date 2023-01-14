@@ -1,4 +1,4 @@
-import { NUIElement } from "./NUIElement";
+import { NUIElement } from "./elements/NUIElement";
 
 type PageConstructor = {
   target: string;

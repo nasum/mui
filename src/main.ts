@@ -1,7 +1,7 @@
 import { Page } from "./lib/Page";
-import { Div } from "./lib/Div";
-import { NUIText } from "./lib/NUIText";
-import { Input } from "./lib/Input";
+import { Div } from "./lib/elements/Div";
+import { NUIText } from "./lib/elements/NUIText";
+import { Input } from "./lib/elements/Input";
 
 const text = new NUIText("Hello nui!!");
 
